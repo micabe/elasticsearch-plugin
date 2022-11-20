@@ -27,6 +27,7 @@ FROM scratch
 EXPOSE 8080
 COPY --from=builder /serve /
 COPY --from=builder /etc/passwd /etc/passwd
+COPY ./web /web
 
 USER static
 ENTRYPOINT ["/serve"]
